@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:rippleColor="#4D426088"
+    app:cardCornerRadius="0dp"
+    app:cardBackgroundColor="@color/gray"
+    android:layout_height="wrap_content"
+    app:strokeColor="@android:color/transparent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
+            android:layout_width="100dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="@color/gray"
+            android:layout_marginBottom="8dp"
+            android:transitionName="BookTrans"
+            app:strokeColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="MissingConstraints">
+
+
+            <ImageView
+                android:id="@+id/ivItemBookImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+               />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/book_handle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvBooName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/josefinsans_bold"
+            android:text="How to be fine"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/tvBookAutherName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:textAllCaps="true"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/josefinsans_bold"
+            android:text="How to be fine"
+            android:textColor="@color/colorPrimary"
+            android:textSize="8sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvBooName"
+            app:layout_constraintStart_toStartOf="@+id/tvBooName"
+            app:layout_constraintTop_toBottomOf="@+id/tvBooName" />
+
+        <TextView
+            android:id="@+id/tvBookDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/josefinsans_bold"
+            android:maxLines="4"
+            android:text="@string/lorelipsum"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/view5"
+            app:layout_constraintEnd_toEndOf="@+id/tvBooName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvBookAutherName"
+            app:layout_constraintTop_toBottomOf="@+id/tvBookAutherName"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+
+            android:layout_height="2dp"
+
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    >-->
+
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:id="@+id/cardView"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        app:cardBackgroundColor="@color/gray"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:transitionName="BookTrans"-->
+<!--        app:strokeColor="@color/colorPrimary"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.5"-->
+<!--        tools:ignore="MissingConstraints">-->
+
+
+<!--        <ImageView-->
+<!--            -->
+<!--            android:id="@+id/ivItemBookImage"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:transitionName="bookTrans"-->
+
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:srcCompat="@drawable/book_2" />-->
+
+<!--        <View-->
+<!--            android:id="@+id/view2"-->
+<!--            android:layout_width="20dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/book_handle"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+<!--    </com.google.android.material.card.MaterialCardView>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvBooName"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:fontFamily="@font/josefinsans_bold"-->
+<!--        android:text="How to be fine"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20sp"-->
+<!--        android:maxLines="3"-->
+<!--        android:ellipsize="end"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/cardView"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/cardView" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvBookAutherName"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:fontFamily="@font/josefinsans_bold"-->
+<!--        android:text="How to be fine"-->
+<!--        android:textColor="@color/colorPrimary"-->
+<!--        android:textSize="12sp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/tvBooName"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tvBooName"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvBooName" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvBookDescription"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:ellipsize="end"-->
+<!--        android:fontFamily="@font/josefinsans_bold"-->
+<!--        android:maxLines="4"-->
+<!--        android:text="@string/lorelipsum"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/cardView"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/tvBooName"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tvBookAutherName"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvBookAutherName"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="2dp"-->
+
+<!--        android:layout_marginTop="5dp"-->
+
+<!--        android:background="@color/colorPrimary"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/cardView" />-->
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "256865728824",
+    "firebase_url": "https://iot-project-1f110-default-rtdb.firebaseio.com",
+    "project_id": "iot-project-1f110",
+    "storage_bucket": "iot-project-1f110.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256865728824:android:8589b2e7e7f77874e229cd",
+        "android_client_info": {
+          "package_name": "com.developermaheshapps.bachelorhelper"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwuVOU06Dip-hVWOlRver_KNWbYRyAeec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

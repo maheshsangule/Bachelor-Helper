@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:padding="10dp"
+    app:cardBackgroundColor="@color/gray"
+    app:cardCornerRadius="18dp"
+    app:rippleColor="#4D426088"
+
+
+    app:strokeColor="@color/colorPrimary"
+    app:strokeWidth="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp">
+
+        <!--        <com.google.android.material.card.MaterialCardView-->
+        <!--            android:id="@+id/cardView"-->
+        <!--            android:layout_width="50dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:layout_marginBottom="8dp"-->
+        <!--            android:transitionName="BookTrans"-->
+        <!--            app:cardBackgroundColor="@color/gray"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:layout_constraintVertical_bias="0.5"-->
+        <!--            app:strokeColor="@color/colorPrimary"-->
+        <!--            tools:ignore="MissingConstraints">-->
+
+
+        <ImageView
+            android:id="@+id/ivItemBookImage"
+            android:layout_width="50dp"
+
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:transitionName="bookTrans"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_pdf" />
+
+
+        <!--        </com.google.android.material.card.MaterialCardView>-->
+
+        <TextView
+            android:id="@+id/tvPdfTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/josefinsans_bold"
+            android:maxLines="4"
+            android:text="How to be fineHow to be fineHow to be fineHow to be fineHow to be fineHow to be fine"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvPdfDownloadDate"
+            app:layout_constraintStart_toEndOf="@+id/ivItemBookImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvPdfDownloadDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="02/03/2024"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvPdfTitle" />
+
+        <TextView
+            android:id="@+id/tvPdfDownloadTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="18:04"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvPdfDownloadDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvPdfDownloadDate" />
+
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="2dp"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:background="@color/colorPrimary"-->
+        <!--            app:layout_constraintEnd_toEndOf="@+id/tvPdfDownloadTime"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/tvPdfDownloadTime" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

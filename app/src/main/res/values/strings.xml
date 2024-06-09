@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Bachelor Helper</string>
+
+    <string name="dev_name">@developer_mahesh</string>
+    <string name="lorelipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper nec sem ut molestie. Pellentesque ex augue, tempus et nibh vel, rutrum rhoncus nisi. Donec bibendum iaculis vulputate. Sed et mollis mi, a ultrices velit. Donec sit amet sapien et libero porttitor scelerisque ac ac diam. Nunc posuere fringilla ex, vitae accumsan ligula tincidunt vitae. Integer ac quam eu elit finibus varius nec in libero. Etiam suscipit tortor nec ipsum finibus, vel varius ante finibus. Sed congue nisl sed mi ullamcorper, nec faucibus urna sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ac quam vel nulla convallis vehicula et vel mi</string>
+    <string name="email">developermaheshhelp@gmail.com</string>
+    <string name="email_subject">Welcome to Bachelor Helper</string>
+    <string name="email_body">Write down your comment below this line. </string>
+    <string name="heading1">Start Learning Smarter</string>
+    <string name="heading2">Study Made Simple</string>
+    <string name="heading3">Ace Your Studies</string>
+    <string name="heading4">Your Academic Companion</string>
+
+
+    <string name="description1">Unlock free books, take notes, and breeze through studies with Bachelor Helper</string>
+    <string name="description2">Your all-in-one study buddy! Find, bookmark, and master content effortlessly</string>
+    <string name="description3">Supercharge your learning! Explore, save, and succeed with Bachelor Helper</string>
+    <string name="description4">Dive into learning! Access, organize, and excel with Bachelor Helper</string>
+
+
+</resources>
