@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.developermaheshapps.bachelorhelper"
+    namespace = "com.developermaheshsofttechltd.bachelorhelper"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.developermaheshapps.bachelorhelper"
+        applicationId = "com.developermaheshsofttechltd.bachelorhelper"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

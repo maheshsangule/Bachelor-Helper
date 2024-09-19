@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".views.activities.HomeActivity"
-    tools:openDrawer="end">
+    tools:openDrawer="start"
+    android:layout_height="match_parent">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -20,7 +19,6 @@
                 android:id="@+id/app_bar_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -32,28 +30,21 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorPrimary"
                     app:menu="@menu/top_menu"
-
                     app:navigationIcon="@drawable/menu_icon"
                     app:navigationIconTint="@color/white"
                     app:title="@string/app_name"
                     app:titleTextAppearance="@style/ActionBarFont"
                     app:titleTextColor="@color/white" />
-
             </com.google.android.material.appbar.AppBarLayout>
 
             <FrameLayout
                 android:id="@+id/fragment_container"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                app:layout_anchorGravity="center"
                 app:layout_constraintBottom_toTopOf="@+id/chipNavigationBar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/app_bar_layout">
-
-
-            </FrameLayout>
-
+                app:layout_constraintTop_toBottomOf="@+id/app_bar_layout" />
 
             <com.ismaeldivita.chipnavigation.ChipNavigationBar
                 android:id="@+id/chipNavigationBar"
@@ -68,10 +59,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -80,11 +68,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:layout_margin="20dp"
-
         android:background="@color/gray"
-
         app:drawerLayoutCornerSize="20dp">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,33 +77,26 @@
             android:layout_marginBottom="20dp"
             android:orientation="vertical">
 
-
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:minHeight="200dp"
                 android:padding="5dp"
-                android:src="@drawable/app_icon3"
-                android:text="@string/app_name"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:src="@drawable/app_icon3" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/josefinsans_bold"
                 android:text="@string/app_name"
                 android:textAlignment="center"
                 android:textColor="@color/secondaryColor"
                 android:textSize="24sp"
                 android:textStyle="bold" />
-
 
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/materialDivider"
@@ -133,7 +111,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-
                 android:layout_marginBottom="20dp">
 
                 <LinearLayout
@@ -142,21 +119,189 @@
                     android:orientation="vertical">
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/tv_profile"
+                        android:id="@+id/tv_home"
                         style="@style/Widget.Material3.Button.TextButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginStart="15dp"
                         android:layout_marginEnd="15dp"
                         android:drawablePadding="15dp"
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center_vertical"
                         android:paddingStart="15dp"
+                        android:text="Home"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:cornerRadius="0dp"
+                        app:icon="@drawable/ic_home"
+                        app:iconPadding="10dp"
+                        app:iconSize="32dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/tv_search"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="15dp"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:paddingStart="15dp"
+                        android:text="Search"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:cornerRadius="0dp"
+                        app:icon="@drawable/ic_search"
+                        app:iconPadding="10dp"
+                        app:iconSize="32dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/tv_about"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="15dp"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:paddingStart="15dp"
+                        android:text="About"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:cornerRadius="0dp"
+                        app:icon="@drawable/ic_about"
+                        app:iconPadding="10dp"
+                        app:iconSize="32dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/tv_profile"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="15dp"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:paddingStart="15dp"
                         android:text="Profile"
-                        android:textColor="#B2000000"
-                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
                         app:cornerRadius="0dp"
                         app:icon="@drawable/ic_person"
+                        app:iconPadding="10dp"
+                        app:iconSize="32dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/tv_disclaimar"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="15dp"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:paddingStart="15dp"
+                        android:text="Disclaimer"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:cornerRadius="0dp"
+                        app:icon="@drawable/ic_disclaimer"
+                        app:iconPadding="10dp"
+                        app:iconSize="32dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/tv_whatsapp_community"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="15dp"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:paddingStart="15dp"
+                        android:text="Community"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:cornerRadius="0dp"
+                        app:icon="@drawable/ic_community"
+                        app:iconPadding="10dp"
+                        app:iconSize="32dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/tv_discord"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="15dp"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:paddingStart="15dp"
+                        android:text="Join Discord"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:cornerRadius="0dp"
+                        app:icon="@drawable/ic_discord"
+                        app:iconPadding="10dp"
+                        app:iconSize="32dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/tv_update"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="15dp"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:paddingStart="15dp"
+                        android:text="Check Update"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:cornerRadius="0dp"
+                        app:icon="@drawable/ic_check_update"
+                        app:iconPadding="10dp"
+                        app:iconSize="32dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/tv_rate_us"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="15dp"
+                        android:drawablePadding="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:paddingStart="15dp"
+                        android:text="Rate Us"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:cornerRadius="0dp"
+                        app:icon="@drawable/ic_star"
                         app:iconPadding="10dp"
                         app:iconSize="32dp" />
 
@@ -174,54 +319,10 @@
                         android:gravity="center_vertical"
                         android:paddingStart="15dp"
                         android:text="Share App"
-                        android:textColor="#B2000000"
-                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
                         app:cornerRadius="0dp"
                         app:icon="@drawable/ic_share"
-                        app:iconPadding="10dp"
-                        app:iconSize="32dp" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/tv_disclaimar"
-                        style="@style/Widget.Material3.Button.TextButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="13dp"
-                        android:layout_marginEnd="15dp"
-
-                        android:drawablePadding="15dp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:gravity="center_vertical"
-                        android:paddingStart="15dp"
-                        android:text="Disclaimer"
-                        android:textColor="#B2000000"
-                        android:textSize="16sp"
-                        app:cornerRadius="0dp"
-                        app:icon="@drawable/ic_info"
-                        app:iconPadding="10dp"
-                        app:iconSize="32dp" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/tv_rate_us"
-                        style="@style/Widget.Material3.Button.TextButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="13dp"
-                        android:layout_marginEnd="15dp"
-
-                        android:drawablePadding="15dp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:gravity="center_vertical"
-                        android:paddingStart="15dp"
-                        android:text="Rate Us"
-                        android:textColor="#B2000000"
-                        android:textSize="16sp"
-                        app:cornerRadius="0dp"
-                        app:icon="@drawable/ic_star"
                         app:iconPadding="10dp"
                         app:iconSize="32dp" />
 
@@ -239,25 +340,21 @@
                         android:gravity="center_vertical"
                         android:paddingStart="15dp"
                         android:text="Privacy Policy"
-                        android:textColor="#B2000000"
-                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
                         app:cornerRadius="0dp"
                         app:icon="@drawable/outline_privacy_tip_24"
                         app:iconPadding="10dp"
                         app:iconSize="32dp" />
                 </LinearLayout>
-
             </androidx.core.widget.NestedScrollView>
-
-
         </LinearLayout>
-
 
         <TextView
             android:id="@+id/tv_version_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
+            android:layout_gravity="bottom|center_vertical|center_horizontal|center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/poppins_regular"
@@ -265,10 +362,6 @@
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="12sp"
-
-
-            tools:ignore="RtlCompat" />
-
+            android:textSize="12sp" />
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

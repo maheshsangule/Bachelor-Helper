@@ -35,7 +35,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.developermaheshapps.bachelorhelper.provider"
+            android:authorities="com.developermaheshsofttechltd.bachelorhelper.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -44,7 +44,7 @@
         </provider>
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.developermaheshapps.bachelorhelper.provider"
+            android:authorities="com.developermaheshsofttechltd.bachelorhelper.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

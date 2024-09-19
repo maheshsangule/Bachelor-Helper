@@ -11,11 +11,17 @@
     <string name="heading3">Ace Your Studies</string>
     <string name="heading4">Your Academic Companion</string>
 
+    <string name="privacy_policy_link">https://sites.google.com/view/bachelorhelperprivacypolicy</string>
 
     <string name="description1">Unlock free books, take notes, and breeze through studies with Bachelor Helper</string>
     <string name="description2">Your all-in-one study buddy! Find, bookmark, and master content effortlessly</string>
     <string name="description3">Supercharge your learning! Explore, save, and succeed with Bachelor Helper</string>
     <string name="description4">Dive into learning! Access, organize, and excel with Bachelor Helper</string>
+
+    <string name="txt_disclaimer">🚫 This app is not affiliated with, sponsored by, or endorsed by any official educational institution or publisher.
+        🎓 Any use of downloaded or accessed content is the sole responsibility of the user.
+        📥 ❗ Do not use the application’s content without proper authorization. ✍️©️
+        2024 Developer Mahesh Softtech Ltd. All rights reserved. 🔐💼</string>
 
 
 </resources>

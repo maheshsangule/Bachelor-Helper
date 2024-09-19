@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
-
-    tools:context=".views.activities.BookDetailsActivity">
+    android:background="@color/gray">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
@@ -23,17 +21,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/colorPrimary"
-
             app:navigationIcon="@drawable/ic_arrow_back"
             app:navigationIconTint="@color/white"
             app:title="Book Title"
 
-
             app:titleTextAppearance="@style/ActionBarFont"
             app:titleTextColor="@color/white" />
-
     </com.google.android.material.appbar.AppBarLayout>
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -43,15 +37,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_bar_layout">
 
-
         <View
             android:id="@+id/view3"
             android:layout_width="wrap_content"
             android:layout_height="270dp"
-
             android:background="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
             tools:ignore="NotSibling" />
@@ -59,23 +50,39 @@
         <com.dinuscxj.progressbar.CircleProgressBar
             android:id="@+id/circleProgressbar"
             android:layout_width="50dp"
+            android:layout_marginTop="8dp"
             android:layout_height="50dp"
-            android:visibility="gone"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
             app:layout_constraintEnd_toEndOf="@+id/mbtnReadBook"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/mbtnReadBook"
+
             app:layout_constraintTop_toBottomOf="@+id/mbtnReadBook"
-            app:layout_constraintVertical_bias="0.911"
+            app:layout_constraintVertical_bias="0.0"
             app:line_width="4dp"
             app:progress_background_color="@color/gray"
-            app:progress_end_color="@android:color/transparent"
+            app:progress_end_color="@color/colorPrimary"
             app:progress_shader="sweep"
             app:progress_start_color="@color/colorPrimary"
             app:progress_stroke_cap="round"
             app:progress_stroke_width="4dp"
             app:progress_style="solid_line"
-            app:progress_text_color="@color/colorPrimary" />
+            app:progress_text_color="@color/colorPrimary"
+            />
+
+        <ImageView
+            android:id="@+id/ivShareBook"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+            app:layout_constraintStart_toStartOf="@+id/mbtnReadBook"
+            app:layout_constraintTop_toBottomOf="@+id/mbtnReadBook"
+            app:srcCompat="@drawable/ic_share"
+            app:tint="@color/colorPrimary" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView"
@@ -83,13 +90,11 @@
             android:layout_height="254dp"
             android:layout_marginStart="16dp"
             android:transitionName="BookTrans"
-
             app:cardBackgroundColor="@color/gray"
             app:layout_constraintBottom_toBottomOf="@+id/view3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:strokeColor="@color/colorPrimary"
-            tools:ignore="MissingConstraints,NotSibling">
+            app:strokeColor="@color/colorPrimary">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -99,16 +104,15 @@
                     android:id="@+id/ivBookImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="#b3426088"
                     android:scaleType="fitXY"
-
+                    android:src="@drawable/join"
                     android:transitionName="bookTrans"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                   />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <View
                     android:id="@+id/view2"
@@ -121,74 +125,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/mCardAudioBook"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            app:cardBackgroundColor="@color/colorPrimary"
-            app:cardCornerRadius="100dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/view3"
-            app:layout_constraintEnd_toEndOf="@+id/view3"
-            app:layout_constraintTop_toBottomOf="@+id/view3"
-            app:rippleColor="#65F3F3F3"
-            android:elevation="4dp"
-            app:strokeWidth="0dp">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_margin="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_headphone"
-                app:tint="@color/white" />
-        </com.google.android.material.card.MaterialCardView>
-
-        <TextView
-            android:id="@+id/none"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ellipsize="end"
-            android:fontFamily="@font/josefinsans_bold"
-            android:gravity="start"
-            android:maxLines="1"
-            android:text="Book Description"
-            android:textColor="@color/colorPrimary"
-            android:textSize="24sp"
-
-            app:layout_constraintEnd_toStartOf="@+id/mCardAudioBook"
-            app:layout_constraintStart_toStartOf="@+id/view3"
-            app:layout_constraintTop_toBottomOf="@+id/view3" />
-
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/materialDivider"
-            app:layout_constraintStart_toStartOf="@+id/materialDivider"
-            app:layout_constraintTop_toBottomOf="@+id/materialDivider">
-
-            <TextView
-                android:id="@+id/tvBookDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-
-                android:ellipsize="end"
-                android:fontFamily="@font/josefinsans_bold"
-                android:text="@string/lorelipsum"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-        </androidx.core.widget.NestedScrollView>
-
-
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/materialDivider"
             android:layout_width="match_parent"
@@ -200,24 +136,24 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/mbtnReadBook"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
             android:fontFamily="@font/poppins_bold"
             android:text="Read Book"
-
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:cornerRadius="18dp"
             app:icon="@drawable/ic_read"
-            app:iconGravity="start"
+            app:iconGravity="textStart"
             app:iconSize="32dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvBookTitle"
+
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tvBookTitle"
             app:layout_constraintTop_toBottomOf="@+id/tvBookAutherName"
-            app:rippleColor="#65F3F3F3"
+            app:rippleColor="#65f3f3f3"
             app:strokeColor="@color/colorPrimary" />
 
         <TextView
@@ -243,7 +179,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-
             android:layout_marginTop="8dp"
             android:fontFamily="@font/josefinsans_bold"
             android:text="How to be fine"
@@ -253,7 +188,79 @@
             app:layout_constraintEnd_toEndOf="@+id/tvBookTitle"
             app:layout_constraintStart_toStartOf="@+id/tvBookTitle"
             app:layout_constraintTop_toBottomOf="@+id/tvBookTitle" />
+
+        <TextView
+            android:id="@+id/none"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/josefinsans_bold"
+            android:gravity="start"
+            android:maxLines="1"
+            android:text="Book Description"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/materialDivider"
+            app:layout_constraintStart_toStartOf="@+id/materialDivider"
+            app:layout_constraintTop_toBottomOf="@+id/materialDivider">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvBookDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:maxLines="5"
+                    android:text="@string/lorelipsum"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvShowMoreAndLess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:maxLines="5"
+                    android:text="Show More..."
+                    android:textColor="#80000000"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvBookDescription"
+                    app:layout_constraintStart_toStartOf="@+id/tvBookDescription"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBookDescription" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bookRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp"
+                    android:paddingTop="2dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tvShowMoreAndLess"
+                    app:layout_constraintStart_toStartOf="@+id/tvShowMoreAndLess"
+                    app:layout_constraintTop_toBottomOf="@+id/tvShowMoreAndLess"
+                    tools:listitem="@layout/book_course_item" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
