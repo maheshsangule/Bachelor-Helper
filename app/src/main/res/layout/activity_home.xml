@@ -32,7 +32,7 @@
                     app:menu="@menu/top_menu"
                     app:navigationIcon="@drawable/menu_icon"
                     app:navigationIconTint="@color/white"
-                    app:title="@string/app_name"
+
                     app:titleTextAppearance="@style/ActionBarFont"
                     app:titleTextColor="@color/white" />
             </com.google.android.material.appbar.AppBarLayout>
