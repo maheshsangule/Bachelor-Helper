@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.developermaheshsofttechltd.bachelorhelper"
+    namespace = "com.1.bachelorhelper"
     compileSdk = 34
 
     defaultConfig {

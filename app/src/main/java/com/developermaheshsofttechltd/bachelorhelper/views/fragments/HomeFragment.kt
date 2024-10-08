@@ -17,6 +17,7 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
+import com.`1`.bachelorhelper.databinding.LayoutProgressBinding
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.developermaheshsofttechltd.bachelorhelper.R
